@@ -313,6 +313,10 @@ header a:hover{
 
 /* Frontpage Styling */
 
+.basketTopMenu.isNotEmpty{
+    background: #000 none repeat scroll 0% 0% !important;
+}
+
 .frontpageLinks a.btn-front{
     background:#fff;
     color:#000;

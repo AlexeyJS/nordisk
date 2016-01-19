@@ -306,6 +306,9 @@ h2 {
     .basketTopMenu:hover {
         opacity: 0.8;
     }
+    .basketTopMenu.isNotEmpty{
+        background: #000 none repeat scroll 0% 0% !important;
+    }
 
     .basketTopMenu span.basket-total {
         display: table-cell;
