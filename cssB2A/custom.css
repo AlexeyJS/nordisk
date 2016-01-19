@@ -15,10 +15,6 @@ table {
     margin-bottom: 0rem;
 }
 
-.backBtnBdy {
-    text-align: left !important;
-}
-
 /* text containers styling */
 input {
     font-family: arial;
@@ -37,171 +33,72 @@ h2 {
     margin: 0 0 0rem;
 }
 
-#main #ShopContent .ec27tbl {
-    width: 100%;
-}
-
 
 
 /* Small screens */
 @media only screen {
-    /* frontpage Login styling START */
-    #main #ShopContent #salesPersonLogin {
-        max-width: 366px !important;
+    /* Tablet top links element styling START */
+    .topTabletSalespersonTablet .columns {
+        padding: 0px 0px !important;
     }
-    /* frontpage Login styling END */
-
-    /* Info menu content styling START */
-    #customInfoMenuOuter {
-        text-align:left !important;
+    .topTabletSalespersonTablet {
+        margin-top:10px !important;
+        text-align:center;
     }
-    #customInfoMenuOuter h1 {
-        font-family: arial, helvetica, sans-serif !important;
-        font-size: 2em !important;
-    }
-
-    #customInfoMenuOuter .customInfoMenuContent {
-        font-family: arial, helvetica, sans-serif !important;
-    }
-
-    #customInfoMenuOuter .customInfoMenuContent h1 {
-        font-family: arial, helvetica, sans-serif !important;
-        font-size: 2em !important;
-    }
-
-    #customInfoMenuOuter .customInfoMenuContent h2{
-        font-family: arial, helvetica, sans-serif !important;
-        font-size: 1.5em !important;
-        color: #333333 !important;
-    }
-
-    #customInfoMenuOuter .customInfoMenuContent h3{
-        font-family: arial, helvetica, sans-serif !important;
-        color: #999999 !important;
-        font-size: 1.2em !important;
-    }
-
-    #customInfoMenuOuter .customInfoMenuContent h4{
-        font-family: arial, helvetica, sans-serif !important;
-        color: #999999 !important;
-        font-size: 1.1em !important;
-    }
-    #customInfoMenuOuter .customInfoMenuContent div{
-        font-family: arial, helvetica, sans-serif !important;
-        color: #000000 !important;
-    }
-    #customInfoMenuOuter .customInfoMenuContent span{
-        font-family: arial, helvetica, sans-serif !important;
-        color: #000000 !important;
-    }
-
-    /* Info menu content styling END */
-
-    /* Page: Product List */
-
-    .page .headline{
-        margin-bottom:0;
-    }
-    .product-filter {
-        border-bottom:1px solid #e6e6e6;
-        border-right:1px solid #e6e6e6;
-        color:#999;
-        font-size:18px;
-        margin-bottom:0px;
-        text-align:right;
-    }
-
-    .product-filter select{
-        background:#fff url('/media/252/img/arrow-down-filter.png') no-repeat right center;
-        border:0;
-        border-left:1px solid #e6e6e6;
-        font-size:18px;
+    .topTabletSalespersonTablet .SalespersonTabletDropdownLink{
+        background-color: #e6e6e6;
+        padding: 14px 0 8px 5px;
+        font-size: 0.7em;
+        margin-top: 2px;
+        margin-bottom: 4px;
         font-weight:bold;
-        margin:0;
-        width:150px;
+        height: 72px;
     }
-
-    .product-json-list{
-        border-left:1px solid #e6e6e6;
-        min-height:100%;
-    }
-
-    .products{
-        padding-top:1rem;
-    }
-
-    .productElement{
-        padding:0 .5rem !important;
-    }
-
-    /*** Sorting on productlist styles ***/
-
-    .sortingText {
-        margin-right: 10px;
-        position: relative;
-        bottom: 1px;
-    }
-
-    .sortingText, .sortingDiv {
-        display: inline-block;
-    }
-
-    .product-filter {
-        display: none;
-    }
-
-    /* Product List: Filter */
-
-    .product-menu .shopMenu{
-        border-top:1px solid #e6e6e6;
-    }
-    .product-menu .shopMenu, .product-menu .shopMenu ul{
-        font-size:14px;
-        width:100%;
-    }
-    .product-menu h3{
-        background:#fff;
-        font-size:18px;
-        font-weight:bold;
-        margin:0;
-        padding:6px 0;
-        text-align: left;
-    }
-    .product-menu .shopMenu > li{
-        border-bottom:1px solid #e6e6e6;
-    }
-    .product-menu .shopMenu li{
-        background:url('/media/252/img/product-menu-arrow.png') no-repeat;
-        background-position:0 8px;
-        padding:4px 0 4px 30px;
-        text-align: left;
-    }
-    .product-menu .shopMenu a {
-        color:#666;
-    }
-
-    .product-menu .shopMenu ul{
-        display:none;
-    }
-
-    .product-menu .shopMenu .activeParent ul,
-    .product-menu .shopMenu .active ul{
+    .topTabletSalespersonTablet .SalespersonTabletDropdownLink img{
         display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .topTabletSalespersonTablet .customerTabletDropdownLink{
+        background-color: #e6e6e6;
+        padding: 14px 0 8px 5px;
+        font-size: 0.7em;
+        margin-top: 2px;
+        margin-bottom: 4px;
+        font-weight:bold;
+        height: 72px;
+    }
+    .topTabletSalespersonTablet .customerTabletDropdownLink img{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .product-menu .shopMenu .active > a,
-    .product-menu .shopMenu .activeParent > a{
+    .topTabletSalespersonTablet .searchTabletDropdownLink{
+        background-color: #e6e6e6;
+        padding: 14px 0 8px 5px;
+        font-size: 0.7em;
+        margin-top: 2px;
+        margin-bottom: 4px;
         font-weight:bold;
+        height: 72px;
     }
+
+    .topTabletSalespersonTablet .searchTabletDropdownLink img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* Tablet top links element styling END */
+
 
     /* Loginpage Styling */
     #main .frontpageLoginBanner {
         height: 8em;
-        text-align: center;
     }
     #main .frontpageLoginBanner img {
         padding-top:4em;
-        margin: 0px auto;
     }
     #main .frontpageLoginDiv {
         display:inline-block;
@@ -210,17 +107,9 @@ h2 {
         background-image: url('/media/252/img/login-bg.png');
     }
 
-    .loginContent table, .loginContent table tr, .loginContent table td {
-        background-color: transparent;
-        padding: 0;
-        padding-bottom: 16px;
-    }
-
-    .loginContent table td:first-child {
-        width: 106px;
-    }
-    .loginContent table {
-        width: 100%;
+    #main #ShopContent #salesPersonLogin {
+        width: auto !important;
+        max-width: 366px !important;
     }
 
     #main #ShopContent #salesPersonLogin div.button {
@@ -247,23 +136,25 @@ h2 {
 
     #main #precontentContainer #ucInfoMessagebdy div{
         border:none;
-        background:#f6f6f6;
+        background:#ffffff;
         font-family: Arial, sans-serif;
         color: #666;
         font-size: 1rem;
         font-weight:normal;
+        padding: 2px 0 0 10px;
     }
     #main #ShopContent #salesPersonLogin .loginContent input{
+        width: 70.9%;
         display:inline-block;
         border-color: #e6e6e6;
         box-shadow:none;
-        margin-bottom: 0px;
     }
     #main #ShopContent #salesPersonLogin .loginContent input.inputError{
         border-bottom: 2px solid #ff0000;
     }
     #main #ShopContent #salesPersonLogin .loginContent label{
         display:inline-block;
+        width: 28%;
         font-family: arial;
     }
     div.greetingDiv {
@@ -275,55 +166,14 @@ h2 {
     }
     div.loginHelpMessage {
         text-align:center;
+        margin-top: 3px;
     }
-    div.loginHelpMessage span {
+    div.loginHelpMessage span{
         font-family: Arial;
-        color: #666;
+        color: #666
         text-decoration: underline;
     }
-
-    #ShopContent {
-        text-align: center !important;
-    }
-
     /* Loginpage Styling */
-
-    /*** Mini basket in top ***/
-
-    .basketTopMenu {
-        background: #000 none repeat scroll 0% 0%;
-        padding: 10px;
-        width: 79px;
-        height: 79px;
-        text-align: center;
-        position: relative;
-        cursor: pointer;
-        top: 12px;
-        float:right;
-        margin-left: 8px;
-    }
-
-    .basketTopMenu:hover {
-        opacity: 0.8;
-    }
-
-    .basketTopMenu span.basket-total {
-        display: table-cell;
-        background: #969696 none repeat scroll 0% 0%;
-        border-radius: 50px;
-        color: #FFF;
-        font-size: 10px;
-        font-weight: bold;
-        position: absolute;
-        top: 3px;
-        right: 8px;
-        vertical-align: middle;
-        padding: 3px 8px;
-    }
-
-    .fixed-side-basket {
-        display: none !important;
-    }
 
 } /* Define mobile styles */
 
@@ -350,7 +200,6 @@ header a:hover{
 }
 
 /* buttons */
-
 #ShopContent a{
     color: #666666;
 }
@@ -388,7 +237,7 @@ header a:hover{
     font-size:13px;
     padding:9px 0 8px 35px;
     text-align:left;
-    width:165px;
+    width:150px;
 }
 
 .btn-change-customer{
@@ -399,18 +248,13 @@ header a:hover{
     background:#e6e6e6 url('/media/252/img/thin-0707_user_profile_remove_delete.svg')no-repeat 5px 7px;
 }
 
-.back-button, .back-button:hover,
-a.back-button, a.back-button:hover{
+.back-button, .back-button:hover{
     background:#e6e6e6;
     color:#666;
     font-family:arial;
     font-size:14px;
     padding:5px 10px;
     text-decoration:none;
-}
-a.back-button, a.back-button:hover{
-    display: inline-block;
-    margin-bottom: 1.25rem;
 }
 
 
@@ -697,35 +541,17 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
 .jsonProducts .products .productElement{
     min-height:225px;
     padding-bottom: 12px !important;
-    text-align: left;
 }
 
-.productImage{
-    height: 150px;
+.productImage {
+    min-height: 150px;
     text-align:center;
 }
+
 .productImage img{
     max-height:150px;
 }
 
-.plistRowEven.plistE6,
-.plistRowOdd.plistE6{
-    width: 100%;
-}
-.prelement.elementKindProduct{
-    width: 25%;
-    padding: 6px;
-}
-.primg{
-    text-align: center;
-    height: 150px;
-    box-sizing: border-box;
-    padding-bottom: 6px;
-}
-.primg img{
-    max-height: 150px;
-    max-width: 150px;
-}
 .productName{
     font-family: arial;
     font-size: 17px;
@@ -733,25 +559,6 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
     min-height: 51px;
 }
 .productName a{
-    color:#333333;
-}
-.prmain a.hlink{
-    font-family:arial;
-    font-size:14px;
-    font-weight:bold;
-}
-.prbasket{
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    color: #666666;
-}
-.plist .plistpager.content a{
-    display: inline-block;
-    padding: 0 3px;
-}
-
-.productName a,
-.prmain a.hlink{
     color:#333333;
 }
 
@@ -843,15 +650,22 @@ span.currentpage{
     margin: 0;
     font-size: 13px;
     color: #333333;
+    padding-bottom: 18px;
 }
 #main #ShopContent .pInfoProductDescriptions{
     font-size: 13px;
     color: #333333;
+    padding-bottom: 12px;
 }
 #main #ShopContent .ExtProductIDLabel,
 #main #ShopContent .ExtProductIDValue{
     color: #333333 !important;
     font-size: 12px;
+}
+
+
+.backBtnBdy {
+    text-align: left !important;
 }
 
 /* Product Details: Images */
@@ -872,7 +686,7 @@ h1.product-name{
     color:#333;
     font-family:arial;
     font-size:24px;
-    font-weight:normal;
+    font-weight: normal;
     margin-bottom:0;
 }
 
@@ -1009,9 +823,8 @@ div.etBasket, .btnVariantBasketButton{
     display:none;
 }
 
-a.basket-button, a.basket-button:focus{
+.basket-button, .basket-button:focus{
     background:#000;
-    color: #FFFFFF !important;
     font-family:arial;
     font-size: 22px;
     font-weight: normal;
@@ -1019,9 +832,8 @@ a.basket-button, a.basket-button:focus{
     text-decoration:none;
 }
 
-a.basket-button:hover{
+.basket-button:hover{
     background:#333;
-    color: #FFFFFF;
     text-decoration:none;
 }
 
@@ -1042,10 +854,6 @@ a.basket-button:hover{
     font-size:.9rem;
 }
 
-.admin-basket {
-    font-size: 18px;
-    padding: 0 12px 0 0;
-}
 
 /* Basket: Header */
 .basket-header h2{
@@ -1313,6 +1121,38 @@ table#miyazaki tbody tr:not(:last-child) {
     color: #555555;
     font-weight: bold;
 }
+.terms-popup{
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    display: none;
+    left: 10%;
+    padding: 12px;
+    position: absolute;
+    right: 10%;
+    top: 18px;
+    max-height: 750px;
+    overflow-y: scroll;
+    z-index: 999;
+}
+.closeDeliveryTermsPop{
+    text-align: right;
+    color: #555555;
+    cursor: pointer;
+}
+#main #ShopContent .AcceptTermsCheckBox{
+    margin-left: 9px !important;
+    width: 450px !important;
+}
+#main #ShopContent .acceptTermsReadMoreDiv{
+    cursor: pointer;
+    padding-top: 3px;
+}
+#main #ShopContent .acceptTermsReadMoreDiv:hover{
+    text-decoration: underline;
+}
+#main #ShopContent .AcceptTermsCheckBox label{
+    margin-right: 3px;
+}
 
 /* Addition styles end */
 
@@ -1323,6 +1163,8 @@ table#miyazaki tbody tr:not(:last-child) {
 .invoice-table tr td.c2{
     display: none;
 }
+
+
 
 @media only screen and (max-width: 40em) {
     /* Header */
@@ -1413,51 +1255,6 @@ table#miyazaki tbody tr:not(:last-child) {
     #customerSelector td{
         display:block;
     }
-
-    /* Basket administration responsive table styling  START */
-    .ec27tbl .HeaderBar {
-        display:none;
-    }
-
-    .ec27tbl tr{
-        display:block;
-        overflow:hidden;
-        padding:1rem .5rem;
-        position:relative;
-    }
-    .ec27tbl tr td{
-        padding:.2rem .5rem;
-        float:left;
-        width:100%;
-    }
-
-    .ec27tbl tr td:before{
-        display:inline-block;
-        font-weight:bold;
-        width:40%;
-    }
-
-    .ec27tbl tr td:nth-child(1):before{
-        /* content:'Navn:'; */
-    }
-    .ec27tbl tr td:nth-child(2):before{
-        content:'Antal:';
-    }
-    .ec27tbl tr td:nth-child(3):before{
-        content:'Bel├╕b:';
-    }
-    .ec27tbl tr td:nth-child(4):before{
-        content:'V├жlg/slet:';
-    }
-
-
-    .ec27tbl tr td:nth-child(7){
-        position:absolute;
-        width:20%;
-        right:0;
-    }
-
-    /* Basket administration responsive table styling  END */
 
     /* CustomerSelector: Quick Fix тАУ Skal laves om senere */
     #customerSelector tr{

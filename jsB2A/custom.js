@@ -1,0 +1,68 @@
+// Responsive Fixes
+$(function() {
+    var timer;
+    $(window).resize(function() {
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            $('.inner-wrap').css("min-height", $(window).height() - $('footer').height() + "px" );
+            $('#main').css("margin-bottom", $('footer').height() + 20 + "px" );
+            $('footer').css("margin-top", '-' + $('footer').height() + "px" );
+            $('a.fixed-side-basket').css("top", $('header').height() + 65 + "px" );
+            $('#drop2 .inputfield').css('width', $('#drop2').width() - $('#drop2 .submitfield').width() + 'px');
+        }, 40);
+    }).resize();
+});
+
+$(document).ready(function(){
+
+    // SmartSearch
+    $('#drop2 .textbox').appendTo('.inputfield');
+    $('#drop2 .submit').appendTo('.submitfield');
+    $('#drop2 .submit').addClass('button postfix search-btn');
+    $('#drop2 .submit').attr("value", "");
+
+    // SelectCustomer
+    $('#customerSelector tr.rowActive td:last-child').html('<i class="fa fa-check fa-2x"></i>');
+    $('#customerSelector tr.rowEven td:last-child a').empty('').html('<i class="fa fa-check fa-2x"></i>');
+    $('#customerSelector tr.rowOdd td:last-child a').empty('').html('<i class="fa fa-check fa-2x"></i>');
+
+    // Responsive Table for Product Details
+
+    if($('.ecVariantTbl tbody').length != 0) {    
+        var headertext = [],
+        headers = document.querySelectorAll(".ecVariantTbl thead td"),
+        tablerows = document.querySelectorAll(".ecVariantTbl thead td"),
+        tablebody = document.querySelector(".ecVariantTbl tbody");
+
+        for(var i = 0; i < headers.length; i++) {
+            var current = headers[i];
+            headertext.push(current.textContent.replace(/\r?\n|\r/,""));
+        }
+        for (var i = 0, row; row = tablebody.rows[i]; i++) {
+            for (var j = 0, col; col = row.cells[j]; j++) {
+                col.setAttribute("data-th", headertext[j]);
+            }
+        }
+    }
+    
+    //Left side menu scripts
+    
+    
+    
+    $( "ul.off-canvas-list label" ).click(function() {
+        $(this).toggleClass('active');
+        $(this).parent().children('ul').toggleClass('active');
+    });
+    
+    $( ".productMenuLeftSide .shopMenu li a" ).each(function( index ) {
+        if($(this).parent().children("ul").length >= 1) {
+            $(this).removeAttr('href').addClass('hasSubMenu');
+        }
+    });
+    
+    $( ".productMenuLeftSide .shopMenu li a.hasSubMenu" ).click(function() {
+        $(this).toggleClass('active');
+        $(this).parent().children('ul').toggleClass('active');
+    });
+    
+});
