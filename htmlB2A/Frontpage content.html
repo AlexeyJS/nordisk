@@ -1,0 +1,52 @@
+<div class="row frontpageLinks clearfix">
+    <div class="small-6 medium-3 columns">
+        <a class="selectCustomer arrow-down btn-front" data-dropdown="drop3" aria-controls="drop3" aria-expanded="false">
+            <img src="/media/252/img/thin-0710_business_tie_user_profile_avatar_man_male.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0710_business_tie_user_profile_avatar_man_male.png'" alt="Select Customer" /><br />
+            Select<br />Customer
+        </a>
+    </div>
+    <div class="small-6 medium-3 columns show-for-medium-up">
+        <a class="ShopMainOrder arrow-down btn-front" data-dropdown="drop4" aria-controls="drop4" aria-expanded="false">
+            <img src="/media/252/img/thin-0072_document_file_paper_text.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0072_document_file_paper_text.png'" alt="Shop main order" /><br />
+            Shop<br />main order
+        </a>
+    </div>
+    <div class="small-6 medium-3 columns show-for-small-only">
+        <a class="ShopMainOrder left-off-canvas-toggle btn-front">
+            <img src="/media/252/img/thin-0072_document_file_paper_text.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0072_document_file_paper_text.png'" alt="Shop main order" /><br />
+            Shop<br />main order
+        </a>
+    </div>
+    <div class="small-6 medium-3 columns">
+        <a href="../pl/Shop-stock-order_86523.aspx" class="shopStockOrderButton btn-front">
+            <img src="/media/252/img/thin-0072_document_file_paper_text.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0072_document_file_paper_text.png'" alt="Shop stock order" />
+            <br />Shop<br />stock order
+        </a>
+    </div>
+    <div class="small-6 medium-3 columns">
+        <a href="/basket/adminshoppingcarts.aspx" class="activeOrderButton btn-front">
+            <img src="/media/252/img/thin-0454_shopping_bag_sale_store.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0454_shopping_bag_sale_store.png'" alt="Active order" />
+            <br />Active order
+        </a>
+    </div>
+    <div class="large-12 columns">
+        <!-- <div id="drop3" class="mega f-dropdown content" aria-hidden="true" aria-autoclose="false" tabindex="-1" data-dropdown-content="">
+            <div id="customerSelector">
+				<eSeller:Control ControlType="CustomerSelector" ControlID="Kundevælger" />
+			</div>
+	  </div> -->
+        <div id="drop4" class="mega f-dropdown content" aria-hidden="true" aria-autoclose="false" tabindex="-1" data-dropdown-content="">
+            <eSeller:Control ControlType="ShopMenu" ControlID="ProductMenu" MenuType="Product" Depth="1" />
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    .fixed-side-basket{
+        display:none;
+    }
+    .page{
+        padding:0;
+        background:none;
+    }
+</style>
