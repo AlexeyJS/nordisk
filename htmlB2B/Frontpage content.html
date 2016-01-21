@@ -1,0 +1,35 @@
+<div class="row frontpageLinks clearfix">
+    <div class="small-6 medium-4 columns">
+        <a aria-expanded="true" aria-controls="drop4" data-dropdown="drop4" class="ShopMainOrder arrow-down btn-front">
+            <img src="/media/252/img/thin-0072_document_file_paper_text.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0072_document_file_paper_text.png'" alt="Shop main order" /><br />
+            <eSeller:Select Text="shop_main_order"/>
+        </a>
+    </div>
+    <div class="small-6 medium-4 columns">
+        <a href="/pl/MAIN_87035.aspx" class="shopStockOrderButton btn-front">
+            <img src="/media/252/img/thin-0072_document_file_paper_text.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0072_document_file_paper_text.png'" alt="Shop stock order" />
+            <br /><eSeller:Select Text="shop_stock_order"/>
+        </a>
+    </div>
+    <div class="small-6 medium-4 columns">
+        <a href="/basket/adminshoppingcarts.aspx" class="activeOrderButton btn-front">
+            <img src="/media/252/img/thin-0454_shopping_bag_sale_store.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0454_shopping_bag_sale_store.png'" alt="Active order" />
+            <br /><eSeller:Select Text="active_order"/>
+        </a>
+    </div>
+    <div class="large-12 columns">
+        <div id="drop4" class="mega f-dropdown content" aria-hidden="true" aria-autoclose="false" tabindex="-1" data-dropdown-content="">
+            <eSeller:Control ControlType="ShopMenu" ControlID="ProductMenu" MenuType="Product" Depth="1" />
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    .fixed-side-basket{
+        display:none;
+    }
+    .page{
+        padding:0;
+        background:none;
+    }
+</style>
