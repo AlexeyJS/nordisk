@@ -704,8 +704,9 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
 /* Page: Product List */
 
 .jsonProducts .products .productElement{
-    padding-bottom: 12px !important;
+    padding-bottom: 24px !important;
     text-align: left;
+    overflow: hidden;
 }
 
 .productImage{
@@ -738,7 +739,7 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
     font-family: arial;
     font-size: 17px;
     margin-bottom: 6px;
-    min-height: 51px;
+    margin-left: 170px;
 }
 .productName a{
     color:#333333;
@@ -766,6 +767,7 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
 .productPriceDiv{
     color:#333333;
     font-size:12px;
+    margin-left: 170px;
 }
 .productPriceDiv:hover{
     color:#333333;
@@ -782,11 +784,14 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
     padding: 6px 0;
     text-align: center;
     cursor: pointer;
+    max-width: 200px;
+    margin-left: 170px;
 }
 .product-number{
     color: #333333;
     font-size: 12px;
     padding-top: 12px;
+    margin-left: 170px;
 }
 
 .pager{

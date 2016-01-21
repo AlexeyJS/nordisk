@@ -93,18 +93,19 @@ weightBeforeZipCode=200000;
                     if(val.isBuyable = "true") {
                         basketDiv = $("<div></div>");
 
-
                         basketDiv.click(function(){
+                            var qtyValue = inputBox.val();
 
                             if(val.grossWeightFormatted >= weightBeforeZipCode) {
-                                ActivateBasketButtonPrompt(val.eSellerId,0,'',1,'GET',encodeURIComponent(window.location.pathname + window.location.search),false,true,val.expectedDeliveryDateFormatted);
+                                ActivateBasketButtonPrompt(val.eSellerId, 0, '', qtyValue, 'GET', encodeURIComponent(window.location.pathname + window.location.search), false, true, val.expectedDeliveryDateFormatted);
                             }
                             else {
-                                atbNoQty(val.eSellerId, 0, 1, '', '', '', '', encodeURIComponent(window.location.pathname + window.location.search));
+                                atbNoQty(val.eSellerId, 0, qtyValue, '', '', '', '', encodeURIComponent(window.location.pathname + window.location.search));
                             }
                         });
                         basketDiv.addClass("addToBasketLnk");
                         basketDiv.text(addToBasketTxt);
+
                     }
                 }
 
@@ -163,6 +164,17 @@ weightBeforeZipCode=200000;
                 productIdDiv = $("<div class='product-number'>" + val.id + "</div>");
                 productIdDiv.prepend('Item no.: ')
                 productDiv.append(productIdDiv);
+
+                inputBox = $("<input />");
+                inputBox.attr("name", val.eSellerId);
+                inputBox.attr("type", "text");
+                if(val.inventoryCountFormatted <= 0){
+                    inputBox.attr("class", "qty-input red");
+                }else{
+                    inputBox.attr("class", "qty-input green");
+                }
+                inputBox.attr("value", 1);
+                productDiv.append(inputBox);
 
                 productDiv.append(basketDiv);
                 if(val.hasSalesPrice == false) {
