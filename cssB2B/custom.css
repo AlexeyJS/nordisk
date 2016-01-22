@@ -1137,6 +1137,22 @@ a.basket-button:hover{
     max-width:50px;
     text-align:center;
 }
+.basket-details table td.c3 > i,
+.basket-details table td.c4 > i,
+.basket-details table td.c3 span span,
+.basket-details table td.c4 span span{
+    display: none;
+}
+.basket-details table td.c3 span i,
+.basket-details table td.c4 span i{
+    font-style: normal;
+}
+.basketStep01 .basket-details table td.c3{
+    width: auto !important;
+}
+.basketStep01 .basket-details table td.c4{
+    width: 100px !important;
+}
 
 .basket-details input{
     font-size:12px;

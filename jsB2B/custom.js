@@ -63,6 +63,21 @@ $(document).ready(function(){
         $(this).parent().children('ul').toggleClass('active');
     });
 
+
+    $('.HeaderBarTables').find("td.c3").wrapInner("<i></i>");
+    $('.HeaderBarTables').find("td.c4").wrapInner("<i></i>");
+
+    $('.HeaderBarTables').find("td.c3").each(function(index){
+        var itemNumber = $(this).html();
+        $(this).next("td.c4").append("<span>" + itemNumber + "</span>");
+    });
+
+    $('.HeaderBarTables').find("td.c4").each(function(index){
+        var itemDescription = $(this).html();
+        $(this).prev("td.c3").append("<span>" + itemDescription + "</span>");
+    });
+
+
 });
 
 //Back button function
