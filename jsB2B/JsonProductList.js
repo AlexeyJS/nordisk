@@ -91,10 +91,12 @@ weightBeforeZipCode=200000;
                 var addToBasketTxt = "Add to Basket";
                 if(val.showAddToBasket = "true") {
                     if(val.isBuyable = "true") {
+
                         basketDiv = $("<div></div>");
 
                         basketDiv.click(function(){
-                            var qtyValue = inputBox.val();
+
+                            var qtyValue = $(this).prev(".qty-input").val();
 
                             if(val.grossWeightFormatted >= weightBeforeZipCode) {
                                 ActivateBasketButtonPrompt(val.eSellerId, 0, '', qtyValue, 'GET', encodeURIComponent(window.location.pathname + window.location.search), false, true, val.expectedDeliveryDateFormatted);
@@ -173,7 +175,7 @@ weightBeforeZipCode=200000;
                 }else{
                     inputBox.attr("class", "qty-input green");
                 }
-                inputBox.attr("value", 1);
+                inputBox.attr("value", "1");
                 productDiv.append(inputBox);
 
                 productDiv.append(basketDiv);
