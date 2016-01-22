@@ -1,5 +1,5 @@
 body{
-    background-image: url(/media/252/img/background.png);
+    background-image: url(/media/252/img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -701,6 +701,20 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
     margin-top:15px;
 }
 
+.move-left > .inner-wrap,
+.move-right > .inner-wrap {
+    -ms-transform: translate(-22.625rem, 0);
+    -webkit-transform: translate3d(-22.625rem, 0, 0);
+    -moz-transform: translate3d(-22.625rem, 0, 0);
+    -ms-transform: translate3d(-22.625rem, 0, 0);
+    -o-transform: translate3d(-22.625rem, 0, 0);
+    transform: translate3d(-22.625rem, 0, 0);
+}
+.left-off-canvas-menu,
+.right-off-canvas-menu{
+    width: 22.625rem;
+}
+
 /* Page: Product List */
 .product-list .product-menu .shopMenu li{
     background-position: -11px 8px;
@@ -1355,7 +1369,22 @@ table#miyazaki tbody tr:not(:last-child) {
 }
 
 @media only screen and (max-width: 40em) {
+    .move-left > .inner-wrap,
+    .move-right > .inner-wrap {
+    -ms-transform: translate(-15.625rem, 0);
+    -webkit-transform: translate3d(-15.625rem, 0, 0);
+    -moz-transform: translate3d(-15.625rem, 0, 0);
+    -ms-transform: translate3d(-15.625rem, 0, 0);
+    -o-transform: translate3d(-15.625rem, 0, 0);
+    transform: translate3d(-15.625rem, 0, 0);
+}
+    .left-off-canvas-menu,
+    .right-off-canvas-menu{
+        width: 15.625rem;
+    }
     /* Header */
+
+
 
     .responsive-menu img{
         margin-top:6px;
@@ -1364,6 +1393,27 @@ table#miyazaki tbody tr:not(:last-child) {
     .responsive-menu .logo{
         margin-top:0;
         max-height:38px;
+    }
+
+    /* Product Listing */
+    .productElement.item{
+        text-align: center;
+    }
+    .productImage{
+        float: none;
+    }
+    input.qty-input{
+        display: inline-block;
+    }
+    .addToBasketLnk{
+        max-width: 100%;
+    }
+    .productName,
+    .productPriceDiv,
+    .product-number,
+    input.qty-input,
+    .addToBasketLnk{
+        margin-left: 0 !important;
     }
 
     /* Basket: Fixed Side */
