@@ -78,7 +78,7 @@ $(document).ready(function(){
         var itemDescription = $(this).html();
         $(this).prev("td.c3").append("<span>" + itemDescription + "</span>");
     });
-    
+
     var stockValue = $('.stockAmountValue').text();
 
     if(stockValue == "0"){

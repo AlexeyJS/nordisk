@@ -897,6 +897,9 @@ span.currentpage{
     background-color: #9a4f51;
     border: 1px solid #bb686a;
 }
+.pInfoVariant .ecVariantLegend{
+    display: none !important;
+}
 #main #ShopContent .pInfoProductLongDescriptions{
     margin: 0;
     font-size: 13px;
