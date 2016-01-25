@@ -705,6 +705,10 @@ span.currentpage{
     border: 1px solid #7c8767;
     padding: 12px;
 }
+.top-pi .stockAmountArea.not-in-stock{
+    background-color: #9a4f51;
+    border: 1px solid #bb686a;
+}
 #main #ShopContent .pInfoProductLongDescriptions{
     margin: 0;
     font-size: 13px;

@@ -77,6 +77,11 @@ $(document).ready(function(){
         $(this).prev("td.c3").append("<span>" + itemDescription + "</span>");
     });
 
+    var stockValue = $('.stockAmountValue').text();
+
+    if(stockValue == "0"){
+        $(".stockAmountValue").parent(".stockAmountArea").addClass("not-in-stock");
+    }
 
 });
 
