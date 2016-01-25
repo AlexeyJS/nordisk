@@ -562,9 +562,15 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
     float: left !important;
     margin-left: -1px;
 }
+.product-menu .shopMenu > li{
+    border-bottom: none !important;
+}
 .product-list .product-menu .shopMenu li{
     background-position: -11px 8px;
     padding-left: 18px;
+}
+.product-list .product-menu .shopMenu > li:not(.active) {
+    display: none;
 }
 .jsonProducts .products .productElement{
     overflow: hidden;
