@@ -1257,6 +1257,10 @@ a.basket-button:hover{
 .editBasketTable table td.c5 a:last-of-type{
     margin: 0 0 0 6px;
 }
+.ecBasketEditor input[type="button"],
+.ecBasketEditor input[type="submit"]{
+    text-transform: uppercase;
+}
 
 /* Footer */
 footer{

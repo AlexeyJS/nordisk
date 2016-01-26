@@ -185,6 +185,14 @@ h2 {
         display: inline-block;
         padding-left: 6px;
     }
+    .basket-list th{
+        font-size: 14px !important;
+    }
+    .basket-list th,
+    .basket-list td,
+    .basket-list table{
+        border: none !important;
+    }
     /* Loginpage Styling */
 
 } /* Define mobile styles */
