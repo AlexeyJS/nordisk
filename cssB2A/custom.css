@@ -94,17 +94,13 @@ h2 {
 
 
     /* Loginpage Styling */
-    #main .frontpageLoginBanner {
-        height: 8em;
-    }
     #main .frontpageLoginBanner img {
-        padding-top:4em;
+        padding-top: 90px;
     }
     #main .frontpageLoginDiv {
         display:inline-block;
-        background-color: transparent;
-        margin: 0px auto;
-        background-image: url('/media/252/img/login-bg.png');
+        background-color: #FFFFFF;
+        margin: 30px auto;
     }
 
     #main #ShopContent #salesPersonLogin {
