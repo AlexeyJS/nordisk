@@ -102,6 +102,12 @@ h2 {
         background-color: #FFFFFF;
         margin: 30px auto;
     }
+    #salesPersonLogin .headerBarLogin h2{
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        color: #666666;
+    }
 
     #main #ShopContent #salesPersonLogin {
         width: auto !important;
@@ -115,10 +121,11 @@ h2 {
     #main #ShopContent #salesPersonLogin div.button input {
         background-color: #000000 !important;
         color: #ffffff;
-        font-family: arial;
+        font-family: Arial, sans-serif;
         width:6.25em;
         height: 1.875em;
         border:none;
+        text-transform: uppercase;
     }
 
     #main #ucInfoMessagebdy{
@@ -140,7 +147,7 @@ h2 {
         padding: 2px 0 0 10px;
     }
     #main #ShopContent #salesPersonLogin .loginContent input{
-        width: 70.9%;
+        width: 65%;
         display:inline-block;
         border-color: #e6e6e6;
         box-shadow:none;
@@ -150,8 +157,11 @@ h2 {
     }
     #main #ShopContent #salesPersonLogin .loginContent label{
         display:inline-block;
-        width: 28%;
-        font-family: arial;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #666666;
+        font-weight: bold;
+        width: 33%;
     }
     div.greetingDiv {
         font-family: arial;
@@ -162,12 +172,18 @@ h2 {
     }
     div.loginHelpMessage {
         text-align:center;
-        margin-top: 3px;
+        font-size: 12px;
+        color: #999999;
+    }
+    div.loginHelpMessage span,
+    div.loginHelpMessage span a {
+        font-family: Arial, sans-serif !important;
+        color: #999999 !important;
+        text-decoration: none !important;
     }
     div.loginHelpMessage span{
-        font-family: Arial;
-        color: #666;
-        text-decoration: underline;
+        display: inline-block;
+        padding-left: 6px;
     }
     /* Loginpage Styling */
 
