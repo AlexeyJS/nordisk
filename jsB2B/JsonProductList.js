@@ -83,7 +83,7 @@ weightBeforeZipCode=200000;
                 }
                 else
                 {
-                    imgsrc = "/SL/SI/695/7e8d0f1e-58b2-4bcb-a41d-d124a29c18fc.jpg";
+                    imgsrc = "/SL/SI/748/b8bbffda-cc7f-42c6-b6a1-6c41e1af05f5.jpg";
                 }
 
                 //Create the add to basket button
