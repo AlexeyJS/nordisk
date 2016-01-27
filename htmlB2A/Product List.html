@@ -4,23 +4,24 @@
         <a href="/" class="back-button"><i class="fa fa-angle-double-left"></i> Back to dashboard</a>
     </div>
     <div class="small-12 columns">
-        <h2>Product List: <eSeller:Select Value-of="MenuCMS:Title" /></h2>
+        <h2><eSeller:Select Text="titlle_product_list" /><eSeller:Select Value-of="MenuCMS:Title" /></h2>
     </div>
 </section>
 <div class="row">
     <div class="small-12 columns product-filter">
         <div class="sortingText"><eSeller:Select text="label_sortingText" /></div><div class="sortingDiv">
+        <!-- SortingElement start, do not modify --><script type="text/javascript">$j(document).ready(function() {var productsCount = 0; if (productsCount == 0) $j('.sortingContainer').attr('style', 'display:none!important;'); });</script><div class="sortingContainer" ><span class="sortingLabel" ><eSeller:Css Name="container" selector=".sortingContainer" groupname="General Sorting Control" selectorgroup="3" /><eSeller:Css Name="label" selector=".sortingContainer .sortingLabel" groupname="General Sorting Control" selectorgroup="3" /></span><eSeller:Control ControlType="ProductSortingList" Controlid="ProductSortingList1" WorksOn="JsonProductList" DefaultValue="ProductCard" DisplayStyle="DropDown" /></div><!-- SortingElement end -->
     </div>
     </div>
 </div>
 <div class="row product-list collapse">
 
     <div class="small-12 medium-3 columns product-menu">
-        <h3>Menu</h3>
+        <h3><eSeller:Select Text="title_menu"/></h3>
         <eSeller:Control ControlType="ShopMenu" ControlID="ProductMenu" MenuType="Product" />
     </div>
     <div class="small-12 medium-9 columns product-json-list">
-        <!-- SortingElement start, do not modify --><script type="text/javascript">$j(document).ready(function() {var productsCount = 0; if (productsCount == 0) $j('.sortingContainer').attr('style', 'display:none!important;'); });</script><div class="sortingContainer" ><span class="sortingLabel" ><eSeller:Css Name="container" selector=".sortingContainer" groupname="General Sorting Control" selectorgroup="3" /><eSeller:Css Name="label" selector=".sortingContainer .sortingLabel" groupname="General Sorting Control" selectorgroup="3" /></span><eSeller:Control ControlType="ProductSortingList" Controlid="ProductSortingList1" WorksOn="JsonProductList" DefaultValue="ProductCard" DisplayStyle="DropDown" /></div><!-- SortingElement end --><eSeller:Control ControlType="JsonProductList" Controlid="JsonProductList" IsMainProductlist="True" TestMode="false" />
+        <eSeller:Control ControlType="JsonProductList" Controlid="JsonProductList" IsMainProductlist="True" TestMode="false" />
     </div>
 
 </div>
@@ -36,4 +37,4 @@
     var langId = <eSeller:Select Value-of="context:Language.LanguageID" />;
 </script>
 
-<script src="/media/252/js/JsonProductList.js?nordisk1"></script>
+<script src="/media/252/js/JsonProductList.js?nordisk"></script>
