@@ -83,6 +83,14 @@ $(document).ready(function(){
         $(".stockAmountValue").parent(".stockAmountArea").addClass("not-in-stock");
     }
 
+    var categoryLevel = $("#main ul.shopMenu").find("li.active");
+
+    if(categoryLevel.parents("li.activeParent").length >= 3){
+        $(".product-json-list").addClass("gallery-view");
+    }else{
+        $(".product-json-list").addClass("list-view");
+    };
+
 });
 
 //Back button function

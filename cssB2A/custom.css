@@ -33,7 +33,12 @@ h2 {
     margin: 0 0 0rem;
 }
 
-
+/* Content width styles for desktop view */
+@media only screen and (min-width: 64.063em) {
+    #main .row.main-content-container{
+        max-width: 1200px !important;
+    }
+}
 
 /* Small screens */
 @media only screen {
