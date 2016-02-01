@@ -88,7 +88,7 @@ weightBeforeZipCode=200000;
 
                 //Create the add to basket button
                 var addToBasketData = "";
-                var addToBasketTxt = "Add to Basket";
+                var addToBasketTxt = "Add to Basket <i class='fa fa-angle-right'></i>";
                 if(val.showAddToBasket = "true") {
                     if(val.isBuyable = "true") {
 
@@ -106,7 +106,7 @@ weightBeforeZipCode=200000;
                             }
                         });
                         basketDiv.addClass("addToBasketLnk");
-                        basketDiv.text(addToBasketTxt);
+                        basketDiv.html(addToBasketTxt);
 
                     }
                 }
@@ -139,7 +139,9 @@ weightBeforeZipCode=200000;
                 productDescriptionLnk.attr('href', val.URLPathAndQuery);
                 productDescriptionLnk.append(val.customFields["Kort Beskrivelse"]);
                 productDescriptionDiv.append(productDescriptionLnk);
+
                 productDiv.append(productDescriptionDiv);
+
 
                 productPriceDiv = $('<div></div>');
                 //productPriceDiv.attr('href', val.URLPathAndQuery);
@@ -148,6 +150,7 @@ weightBeforeZipCode=200000;
                 if(!val.hasSalesPrice == false) {
                     productPriceDiv.append(val.salesPrices[0].tagPriceFormatted);
                 }
+
                 productDiv.append(productPriceDiv);
                 productDiscountPriceDiv = $('<a></a>');
                 productDiscountPriceDiv.attr('href', val.URLPathAndQuery);
@@ -161,10 +164,12 @@ weightBeforeZipCode=200000;
                         productDiscountPriceDiv.append(val.salesPrices[0].tagPriceLineDiscountAmountFormatted);
                     }
                 }
-                productDiv.append(productDiscountPriceDiv);
+
+                    productDiv.append(productDiscountPriceDiv);
 
                 productIdDiv = $("<div class='product-number'>" + val.id + "</div>");
-                productIdDiv.prepend('Item no.: ')
+                productIdDiv.prepend('Item no.: ');
+
                 productDiv.append(productIdDiv);
 
                 inputBox = $("<input />");
@@ -176,9 +181,10 @@ weightBeforeZipCode=200000;
                     inputBox.attr("class", "qty-input green");
                 }
                 inputBox.attr("value", "1");
-                productDiv.append(inputBox);
 
+                productDiv.append(inputBox);
                 productDiv.append(basketDiv);
+
                 if(val.hasSalesPrice == false) {
 
                 }

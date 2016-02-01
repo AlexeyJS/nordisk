@@ -87,10 +87,10 @@ $(document).ready(function(){
 
     var categoryLevel = $("#main ul.shopMenu").find("li.active");
 
-    if(categoryLevel.parents("li.activeParent").length >= 3){
-        $(".product-json-list").addClass("gallery-view");
-    }else{
+    if(categoryLevel.children("ul").length > 0){
         $(".product-json-list").addClass("list-view");
+    }else{
+        $(".product-json-list").addClass("gallery-view");
     };
 
 });
