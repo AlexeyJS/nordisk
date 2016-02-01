@@ -565,8 +565,15 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
     margin-top:15px;
 }
 
-.move-left > .inner-wrap,
 .move-right > .inner-wrap {
+    -ms-transform: translate(22.625rem, 0);
+    -webkit-transform: translate3d(22.625rem, 0, 0);
+    -moz-transform: translate3d(22.625rem, 0, 0);
+    -ms-transform: translate3d(22.625rem, 0, 0);
+    -o-transform: translate3d(22.625rem, 0, 0);
+    transform: translate3d(22.625rem, 0, 0);
+}
+.move-left > .inner-wrap{
     -ms-transform: translate(-22.625rem, 0);
     -webkit-transform: translate3d(-22.625rem, 0, 0);
     -moz-transform: translate3d(-22.625rem, 0, 0);
@@ -1366,18 +1373,25 @@ table#miyazaki tbody tr:not(:last-child) {
 
 
 @media only screen and (max-width: 40em) {
-    .move-left > .inner-wrap,
+    .left-off-canvas-menu,
+    .right-off-canvas-menu{
+        width: 15.625rem;
+    }
     .move-right > .inner-wrap {
+        -ms-transform: translate(15.625rem, 0);
+        -webkit-transform: translate3d(15.625rem, 0, 0);
+        -moz-transform: translate3d(15.625rem, 0, 0);
+        -ms-transform: translate3d(15.625rem, 0, 0);
+        -o-transform: translate3d(15.625rem, 0, 0);
+        transform: translate3d(15.625rem, 0, 0);
+    }
+    .move-left > .inner-wrap{
         -ms-transform: translate(-15.625rem, 0);
         -webkit-transform: translate3d(-15.625rem, 0, 0);
         -moz-transform: translate3d(-15.625rem, 0, 0);
         -ms-transform: translate3d(-15.625rem, 0, 0);
         -o-transform: translate3d(-15.625rem, 0, 0);
-        transform: translate3d(-15.625rem, 0, 0);
-    }
-    .left-off-canvas-menu,
-    .right-off-canvas-menu{
-        width: 15.625rem;
+        transform: translate3d(-15.625rem, 0, 0)
     }
 
     /* Header */
