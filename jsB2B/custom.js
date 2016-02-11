@@ -83,13 +83,18 @@ $(document).ready(function(){
         $(".stockAmountValue").parent(".stockAmountArea").addClass("not-in-stock");
     }
 
-    var categoryLevel = $("#main ul.shopMenu").find("li.active");
-
-    if(categoryLevel.children("ul").length > 0){
+    if($('.search-results').length > 0){
         $(".product-json-list").addClass("list-view");
-    }else{
-        $(".product-json-list").addClass("gallery-view");
-    };
+    }
+    else {
+        var categoryLevel = $("#main ul.shopMenu").find("li.active");
+
+        if(categoryLevel.children("ul").length > 0){
+            $(".product-json-list").addClass("list-view");
+        }else{
+            $(".product-json-list").addClass("gallery-view");
+        };
+    }
 
 });
 
