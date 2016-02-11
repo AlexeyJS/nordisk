@@ -459,11 +459,11 @@ var productList = "";
 var targetelement = $j(".jsonProducts").attr("id");
 
 if(location.href.indexOf("/pl/")!=-1){
-    productList = '/Services/ProductService.asmx/ProductList?v=1.0&lId=0&locId=' + locId + '&so=' + so + '&cId=' + cId + '&langId=' + langId + '&countryId=' + contId +  '&customerId=' + customerId + '&mId=' + mId + '&p=' + page + '&rp=' + rp;
+    productList = '/Services/ProductService.asmx/ProductList?v=1.0&lId=0&locId=' + locId + '&so=' + so + '&cId=' + cId + '&langId=' + langId + '&countryId=' + contId +  '&customerId=' + customerIDHash + '&mId=' + mId + '&p=' + page + '&rp=' + rp;
 }
 
 if($('.search-results').length > 0){
-    productList = '/Services/ProductService.asmx/ProductList?v=1.0&lId=0&locId=' + locId + '&so=' + so + '&cId=' + cId + '&langId=' + langId + '&countryId=' + contId +  '&customerId=' + customerId + '&p=' + page + '&rp=' + rp +'&maxSearchResults=200&search=' + jsonSearchQueryString;
+    productList = '/Services/ProductService.asmx/ProductList?v=1.0&lId=0&locId=' + locId + '&so=' + so + '&cId=' + cId + '&langId=' + langId + '&countryId=' + contId +  '&customerId=' + customerIDHash + '&p=' + page + '&rp=' + rp +'&maxSearchResults=200&search=' + jsonSearchQueryString;
 }
 
 
