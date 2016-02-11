@@ -28,7 +28,7 @@ $(document).ready(function(){
 
     // Responsive Table for Product Details
 
-    if($('.ecVariantTbl tbody').length != 0) {    
+    if($('.ecVariantTbl tbody').length != 0) {
         var headertext = [],
         headers = document.querySelectorAll(".ecVariantTbl thead td"),
         tablerows = document.querySelectorAll(".ecVariantTbl thead td"),
@@ -44,22 +44,22 @@ $(document).ready(function(){
             }
         }
     }
-    
+
     //Left side menu scripts
-    
-    
-    
+
+
+
     $( "ul.off-canvas-list label" ).click(function() {
         $(this).toggleClass('active');
         $(this).parent().children('ul').toggleClass('active');
     });
-    
+
     $( ".productMenuLeftSide .shopMenu li a" ).each(function( index ) {
         if($(this).parent().children("ul").length >= 1) {
             $(this).removeAttr('href').addClass('hasSubMenu');
         }
     });
-    
+
     $( ".productMenuLeftSide .shopMenu li a.hasSubMenu" ).click(function() {
         $(this).toggleClass('active');
         $(this).parent().children('ul').toggleClass('active');
@@ -85,12 +85,17 @@ $(document).ready(function(){
         $(".stockAmountValue").parent(".stockAmountArea").addClass("not-in-stock");
     };
 
-    var categoryLevel = $("#main ul.shopMenu").find("li.active");
-
-    if(categoryLevel.children("ul").length > 0){
+    if($('.search-results').length > 0){
         $(".product-json-list").addClass("list-view");
-    }else{
-        $(".product-json-list").addClass("gallery-view");
-    };
+    }
+    else {
+        var categoryLevel = $("#main ul.shopMenu").find("li.active");
+
+        if(categoryLevel.children("ul").length > 0){
+            $(".product-json-list").addClass("list-view");
+        }else{
+            $(".product-json-list").addClass("gallery-view");
+        };
+    }
 
 });
