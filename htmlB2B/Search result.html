@@ -1,0 +1,30 @@
+<section class="backBtnBdy" style="padding-bottom: 12px;">
+    <a href="/" class="back-button"><i class="fa fa-angle-double-left"></i> Back to dashboard</a>
+ </section>
+<!--<eSeller:Control ControlType="ProductList" ControlId="MainProductList" DataProvider="" IsMainProductList="true" />-->
+<h1>
+    <eSeller:Select text="label_search-results_header" />:&amp;nbsp;<eSeller:Select Value-of="context:QueryparmValue(&quot;searchtext&quot;)" />
+</h1>
+<style>
+    h1 {
+        text-align: left;
+        font-size: 30px;
+    }
+</style>
+<div class="row product-list collapse search-results">
+    <div class="small-12 columns product-json-list" style="border: medium none;">
+        <eSeller:Control ControlType="JsonProductList" Controlid="JsonProductList" IsMainProductlist="True" TestMode="false" />
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    var mId = '<eSeller:Select value-of="context:TreeItemId" />';
+    var serial = "<eSeller:Select Value-Of="context:ProductlistCacheKey" />" + window.location.host;
+    var so = 7;
+    var locId = <eSeller:Select Value-Of="context:location.InternalID" />;
+    var langId = <eSeller:Select Value-of="context:Language.LanguageID" />;
+    var jsonSearchQueryString = '<eSeller:Select Value-of="context:QueryparmValue(&quot;searchtext&quot;)" />';
+</script>
+
+<script src="/media/252/js/JsonProductList.js?nordisk"></script>
