@@ -91,23 +91,28 @@ weightBeforeZipCode=200000;
                 var addToBasketTxt = "Add to Basket <i class='fa fa-angle-right'></i>";
                 if(val.showAddToBasket = "true") {
                     if(val.isBuyable = "true") {
-
                         basketDiv = $("<div></div>");
-
-                        basketDiv.click(function(){
-
-                            var qtyValue = $(this).prev(".qty-input").val();
-
-                            if(val.grossWeightFormatted >= weightBeforeZipCode) {
-                                ActivateBasketButtonPrompt(val.eSellerId, 0, '', qtyValue, 'GET', encodeURIComponent(window.location.pathname + window.location.search), false, true, val.expectedDeliveryDateFormatted);
-                            }
-                            else {
-                                atbNoQty(val.eSellerId, 0, qtyValue, '', '', '', '', encodeURIComponent(window.location.pathname + window.location.search));
-                            }
-                        });
                         basketDiv.addClass("addToBasketLnk");
-                        basketDiv.html(addToBasketTxt);
+                        if(val.hasVariants === false) {
+                            basketDiv.click(function(){
 
+                                var qtyValue = $(this).prev(".qty-input").val();
+
+                                if(val.grossWeightFormatted >= weightBeforeZipCode) {
+                                    ActivateBasketButtonPrompt(val.eSellerId, 0, '', qtyValue, 'GET', encodeURIComponent(window.location.pathname + window.location.search), false, true, val.expectedDeliveryDateFormatted);
+                                }
+                                else {
+                                    atbNoQty(val.eSellerId, 0, qtyValue, '', '', '', '', encodeURIComponent(window.location.pathname + window.location.search));
+                                }
+                            });
+                            basketDiv.html(addToBasketTxt);
+                        }
+                        else {
+                            basketDiv.html("Select variants");
+                            basketDiv.click(function(){
+                                window.location.href = val.URLPathAndQuery;
+                            });
+                        }
                     }
                 }
 
