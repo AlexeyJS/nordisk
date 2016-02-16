@@ -361,6 +361,25 @@ h2 {
         display: none !important;
     }
 
+    /*** Send login styles ***/
+
+    .sendPasswordArea,
+    .resetPasswordArea {
+        background-color: #fff;
+        padding: 0.5625rem 0.625rem;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .sendPasswordArea pre {
+        height: auto !important;
+    }
+
+    .sendPasswordArea pre br,
+    .sendPasswordArea br {
+        display: none;
+    }
+
 } /* Define mobile styles */
 
 /* Header Styling */
