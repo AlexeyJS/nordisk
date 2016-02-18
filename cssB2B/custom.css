@@ -1018,12 +1018,17 @@ span.currentpage{
     padding-bottom: 2rem;
 }
 .top-pi .pInfoProductPrices{
-    background-color: #95a2ab;
+    background-color: #999999;
     width: 45%;
     text-align: center;
-    border: 1px solid #7c8767;
+    border: 1px solid #666666;
     padding: 12px;
 }
+
+td.ucImageControltrImg div img {
+    border: solid 1px #9B9B9B;
+}
+
 .top-pi .pInfoProductPrices .ProductPriceValue,
 .top-pi .pInfoProductPrices .ProductPriceLabel,
 .top-pi .stockAmountArea .stockAmountText,
@@ -1137,6 +1142,7 @@ div.pInfoProductLongDescriptions{
 
 .ProductListPrice{
     font-size:14px;
+    display: none !important;
 }
 
 /* Product Details: Variants */
