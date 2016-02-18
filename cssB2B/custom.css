@@ -270,7 +270,7 @@ h2 {
 
     #main #precontentContainer #ucInfoMessagebdy div{
         border:none;
-        background:#f6f6f6;
+        background:#CDEFCD;
         font-family: Arial, sans-serif;
         color: #666;
         font-size: 1rem;
@@ -842,7 +842,7 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
 .list-view .productImage {
     min-height: 40px;
     float: left;
-    border: solid 1px #b9b9b9;
+    border: solid 1px #B9B9B9;
 }
 
 .list-view .productImage img{
@@ -898,7 +898,7 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
 .list-view .product-number{
     color: #333333;
     font-size: 11px;
-    font-style: italic;
+    font-style: normal;
     margin-right: 194px;
     text-align: right;
 }
@@ -921,7 +921,8 @@ input.qty-input.green {
     background-color: #CDEFCD;
 }
 input.qty-input.red{
-    border: 1px solid #9a4f51;
+    border: 1px solid #B9B9B9;
+    background-color: #FFD9DA;
 }
 
 /* Product listing gallery styles */
@@ -937,6 +938,7 @@ input.qty-input.red{
 
 .gallery-view .productImage {
     min-height: 160px;
+    border: solid 1px #B9B9B9;
 }
 
 .gallery-view .productImage img{
@@ -975,7 +977,7 @@ input.qty-input.red{
 .gallery-view .product-number{
     color: #333333;
     font-size: 12px;
-    font-style: italic;
+    font-style: normal;
 }
 .gallery-view input.qty-input{
     display: none;
@@ -1026,7 +1028,7 @@ span.currentpage{
 }
 
 td.ucImageControltrImg div img {
-    border: solid 1px #9B9B9B;
+    border: solid 1px #B9B9B9;
 }
 
 .top-pi .pInfoProductPrices .ProductPriceValue,
@@ -1043,6 +1045,12 @@ td.ucImageControltrImg div img {
     text-align: center;
     border: 1px solid #7c8767;
     padding: 12px;
+}
+#main #ShopContent .stockAmountText {
+    font-size: 18px;
+}
+#main #ShopContent .stockAmountValue {
+    font-size: 18px;
 }
 .top-pi .stockAmountArea.not-in-stock{
     background-color: #9a4f51;
@@ -1687,7 +1695,7 @@ table#miyazaki tbody tr:not(:last-child) {
     .list-view .product-number{
         color: #333333;
         font-size: 12px;
-        font-style: italic;
+        font-style: normal;
         float: none;
         text-align: center;
         margin-right: 0;
