@@ -643,6 +643,7 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
 .list-view .productImage {
     min-height: 40px;
     float: left;
+		border: solid 1px #b9b9b9;
 }
 
 .list-view .productImage img{
