@@ -170,7 +170,7 @@ weightBeforeZipCode=200000;
                     }
                 }
 
-                    productDiv.append(productDiscountPriceDiv);
+                //productDiv.append(productDiscountPriceDiv);
 
                 productIdDiv = $("<div class='product-number'>" + val.id + "</div>");
                 productIdDiv.prepend('Item no.: ');
@@ -205,7 +205,7 @@ weightBeforeZipCode=200000;
                         productTilbudIcon.attr('src', '/media/211/img/Tilbud.png');
                         productTilbudIcon.attr('alt', '');
                         productTilbudIconLnk.append(productTilbudIcon);
-                        productDiv.append(productTilbudIconLnk);
+                        //productDiv.append(productTilbudIconLnk);
                     }
                 }
 
