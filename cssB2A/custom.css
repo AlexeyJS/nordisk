@@ -33,6 +33,10 @@ h2 {
     margin: 0 0 0rem;
 }
 
+.orderCompletePageBdy table.ec70tblPaymentAddress td.c1, .orderCompletePageBdy table.ec71tblShipmentAddress td.c1 {
+    width: 120px !important;
+}
+
 /* Content width styles for desktop view */
 @media only screen and (min-width: 64.063em) {
     #main .row.main-content-container{
@@ -1176,6 +1180,7 @@ div.etBasket, .btnVariantBasketButton{
 
 .basket-totals td:last-child{
     padding-right:48px;
+    text-align: right;
 }
 
 /* Basket: Bottom Navigation */

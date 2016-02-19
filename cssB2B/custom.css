@@ -19,6 +19,10 @@ table {
     text-align: left !important;
 }
 
+.orderCompletePageBdy table.ec70tblPaymentAddress td.c1, .orderCompletePageBdy table.ec71tblShipmentAddress td.c1 {
+    width: 120px !important;
+}
+
 /* text containers styling */
 input {
     font-family: arial;
@@ -1372,6 +1376,7 @@ a.basket-button:hover{
 
 .basket-totals td:last-child{
     padding-right:48px;
+    text-align: right;
 }
 
 /* Basket: Bottom Navigation */
