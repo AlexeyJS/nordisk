@@ -1813,6 +1813,9 @@ table#miyazaki tbody tr:not(:last-child) {
         right: 0;
         top: 0;
     }
+    .list-view .addToBasketLnk.variant-basket {
+        width: 98px;
+    }
     .list-view .productPriceDiv,
     .list-view .product-number{
         margin-right: 107px;
