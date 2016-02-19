@@ -3,7 +3,6 @@ PageNo="Side";
 PageOf="af";
 NextPageText ="";
 PrevPageText ="";
-cId=54;
 contId=11;
 customerId=0;
 rp=60;
@@ -109,6 +108,7 @@ weightBeforeZipCode=200000;
                         }
                         else {
                             basketDiv.html("Select variants");
+                            basketDiv.addClass('variant-basket');
                             basketDiv.click(function(){
                                 window.location.href = val.URLPathAndQuery;
                             });
@@ -186,6 +186,9 @@ weightBeforeZipCode=200000;
                     inputBox.attr("class", "qty-input green");
                 }
                 inputBox.attr("value", "1");
+                if(val.hasVariants === true) {
+                    inputBox.hide();
+                }
 
                 productDiv.append(inputBox);
                 productDiv.append(basketDiv);

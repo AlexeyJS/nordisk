@@ -889,6 +889,9 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
     right: 0;
     top: 0;
 }
+.list-view .addToBasketLnk.variant-basket {
+    width: 186px;
+}
 .list-view .addToBasketLnk i{
     display: none;
 }
@@ -1690,6 +1693,9 @@ table#miyazaki tbody tr:not(:last-child) {
         cursor: pointer;
         float: none;
         position: inherit !important;
+    }
+    .list-view .addToBasketLnk.variant-basket {
+        width: 100%;
     }
     .gallery-view .product-number,
     .list-view .product-number{
