@@ -118,7 +118,7 @@ weightBeforeZipCode=200000;
 
 
                 productDiv = $("<div data-equalizer></div>");
-                productDiv.addClass("productElement item");
+                productDiv.addClass("productElement item clearfix");
                 productImageDiv = $("<div></div>");
                 productImageDiv.addClass("productImage");
                 productLink = $("<a></a>");
