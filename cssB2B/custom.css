@@ -1167,9 +1167,28 @@ div.pInfoProductLongDescriptions{
 
 .product-variant{
     margin-top:2rem;
+    padding-left: 0px !important;
 }
+
+#main #ShopContent .ecVariantTbl td.vvh {
+    padding: 0px 5px 0px 5px !important;
+    text-align: center;
+    border: 0px solid #B9B9B9 !important;
+    background-color: #FFFFFF;
+}
+
+#main #ShopContent .ecVariantTbl input.instock {
+    background-color: #CDEFCD;
+    border: 1px solid #FFFFFF !important;
+}
+
 input.instock, input:focus.instock {
     border-color:#8cbd7a;
+}
+
+#main #ShopContent .ecVariantTbl input.notinstock {
+    background-color: #FFD9DA;
+    border: 1px solid #FFFFFF !important;
 }
 
 input.notinstock, input:focus.notinstock{
@@ -1185,13 +1204,13 @@ input.notinstock, input:focus.notinstock{
 }
 
 .ecVariantTbl td:first-child{
-    background:#f6f6f6;
+    background:#FFFFFF;
     font-weight:bold;
     padding:0 1rem;
 }
 
 .ecVariantTbl td{
-    border:1px solid #e6e6e6;
+    border: 0px solid #e6e6e6;
 }
 
 .ecVariantTbl input{
@@ -1201,7 +1220,7 @@ input.notinstock, input:focus.notinstock{
 }
 
 .ecVariantTbl td.hvh{
-    background:#f6f6f6;
+    background:#FFFFFF;
     text-align:center;
     padding:.5rem;
 }
