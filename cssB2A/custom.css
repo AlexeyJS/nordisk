@@ -888,6 +888,7 @@ td.ucImageControltrImg div img {
 
 
 .backBtnBdy {
+  padding-bottom:10px !important;
     text-align: left !important;
 }
 
@@ -1062,9 +1063,20 @@ input.notinstock, input:focus.notinstock{
     text-align:right;
 }
 
-div.etBasket, .btnVariantBasketButton{
+.btnVariantBasketButton{
     display:none;
 }
+
+.etBasket > span > img{
+  display:none !important;
+}
+
+#main #ShopContent .ecBB input{
+  display:inline-block;
+  margin-right:10px;
+}
+
+
 
 .basket-button, .basket-button:focus{
     background:#000;
@@ -1219,6 +1231,15 @@ div.etBasket, .btnVariantBasketButton{
 .basket-bottom-navigation .buttonNavNext{
     background:#000;
     color:#fff;
+}
+
+.buttonNavPrev{
+  background: #e6e6e6;
+  border: 0;
+  margin-left: 10px;
+  padding: 7px 10px 6px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 
@@ -1459,6 +1480,10 @@ table#miyazaki tbody tr:not(:last-child) {
     }
 
     /* Header */
+
+    .basketStep01 .basket-details table td.c4{
+      width:100%;
+    }
 
     .responsive-menu img{
         margin-top:6px;
@@ -1721,15 +1746,15 @@ table#miyazaki tbody tr:not(:last-child) {
         text-align:center;
     }
     .basket-details tr td:nth-child(2):before{
-        content:'Varenr.:';
+        content:'Description:';
     }
 
     .basket-details tr td:nth-child(3):before{
-        content:'Beskrivelse:';
+        content:'Number:';
     }
 
     .basket-details tr td:nth-child(4):before{
-        content:'Antal:';
+        content:'Amount:';
     }
 
     .basket-details tr td:nth-child(4), .basket-details input{
@@ -1744,7 +1769,7 @@ table#miyazaki tbody tr:not(:last-child) {
     }
 
     .basket-details tr td:nth-child(5):before{
-        content:'Pris:';
+        content:'Price:';
     }
 
     .basket-details tr td:nth-child(6):before{

@@ -262,6 +262,12 @@
         vertical-align: top;
     }
 
+    .orderCompletePageBdy .paymentMethod,
+    .orderCompletePageBdy .shipmentMethod
+    .orderCompletePageBdy .orderRemarksDiv{
+      text-align:left;
+    }
+
     .orderCompletePageBdy .orderInformationDiv.first {
         padding-right: 10px;
     }

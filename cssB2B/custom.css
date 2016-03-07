@@ -1170,6 +1170,10 @@ div.pInfoProductLongDescriptions{
     padding-left: 0px !important;
 }
 
+#main #ShopContent .ecVariantTbl.one-row td:first-child{
+  display:none;
+}
+
 #main #ShopContent .ecVariantTbl td.vvh {
     padding: 0px 5px 0px 5px !important;
     text-align: center;
@@ -1255,9 +1259,19 @@ input.notinstock, input:focus.notinstock{
     text-align:right;
 }
 
-div.etBasket, .btnVariantBasketButton{
+.btnVariantBasketButton{
     display:none;
 }
+
+.etBasket > span > img{
+  display:none !important;
+}
+
+#main #ShopContent .ecBB input{
+  display:inline-block;
+  margin-right:10px;
+}
+
 
 a.basket-button, a.basket-button:focus{
     background:#000;
@@ -1415,6 +1429,15 @@ a.basket-button:hover{
 .basket-bottom-navigation .buttonNavNext{
     background:#000;
     color:#fff;
+}
+
+.buttonNavPrev{
+  background: #e6e6e6;
+  border: 0;
+  margin-left: 10px;
+  padding: 7px 10px 6px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /* Basket administration */
@@ -1632,8 +1655,9 @@ table#miyazaki tbody tr:not(:last-child) {
     }
     /* Header */
 
-
-
+    .basketStep01 .basket-details table td.c4{
+      width:100%;
+    }
     .responsive-menu img{
         margin-top:6px;
     }
@@ -1936,15 +1960,15 @@ table#miyazaki tbody tr:not(:last-child) {
         text-align:center;
     }
     .basket-details tr td:nth-child(2):before{
-        content:'Varenr.:';
-    }
-
-    .basket-details tr td:nth-child(3):before{
         content:'Beskrivelse:';
     }
 
+    .basket-details tr td:nth-child(3):before{
+        content:'Number:';
+    }
+
     .basket-details tr td:nth-child(4):before{
-        content:'Antal:';
+        content:'Amount:';
     }
 
     .basket-details tr td:nth-child(4), .basket-details input{
@@ -1959,7 +1983,7 @@ table#miyazaki tbody tr:not(:last-child) {
     }
 
     .basket-details tr td:nth-child(5):before{
-        content:'Pris:';
+        content:'Price:';
     }
 
     .basket-details tr td:nth-child(6):before{
