@@ -81,7 +81,7 @@ $(document).ready(function(){
 
     var stockValue = $('.stockAmountValue').text();
 
-    if(stockValue == "0"){
+    if(stockValue <= 0){
         $(".stockAmountValue").parent(".stockAmountArea").addClass("not-in-stock");
     };
 

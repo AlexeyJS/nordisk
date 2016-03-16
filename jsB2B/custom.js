@@ -79,7 +79,7 @@ $(document).ready(function(){
 
     var stockValue = $('.stockAmountValue').text();
 
-    if(stockValue == "0"){
+    if(stockValue <= 0){
         $(".stockAmountValue").parent(".stockAmountArea").addClass("not-in-stock");
     }
 
@@ -94,6 +94,10 @@ $(document).ready(function(){
         }else{
             $(".product-json-list").addClass("gallery-view");
         };
+    }
+
+    if($('.ecVariantTbl tr').length < 3){
+      $('.ecVariantTbl').addClass('one-row');
     }
 
 });

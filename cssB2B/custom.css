@@ -1269,7 +1269,11 @@ input.notinstock, input:focus.notinstock{
 
 #main #ShopContent .ecBB input{
   display:inline-block;
-  margin-right:10px;
+  height: 47px !important;
+  line-height: 47px;
+  width: 40px !important;
+  position: relative;
+  top: -4px;
 }
 
 
@@ -2040,6 +2044,26 @@ table#miyazaki tbody tr:not(:last-child) {
     .basket-bottom-navigation .buttonNavNext{
         width:100%;
         font-size:1rem;
+    }
+
+    /*** product list add to basket ***/
+    .addToBasketLnk{
+        width: 84%;
+        float: right !important;
+    }
+
+    .list-view input.qty-input,
+    input.qty-input {
+        position: relative;
+        right: 0;
+        top: 3px;
+        float: left;
+        width: 15% !important;
+        margin-right: 0 !important;
+    }
+
+    input.qty-input {
+        top: 0px;
     }
 
 
