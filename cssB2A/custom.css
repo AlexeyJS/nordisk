@@ -776,9 +776,12 @@ input.qty-input.red {
     font-size: 14px;
     text-transform: uppercase;
     margin: 3px 0 0 0;
-    padding: 9px 16px;
+    padding: 9px 19px;
     cursor: pointer;
     float:right !important;
+}
+.gallery-view .addToBasketLnk.variant-basket{
+  width:100%;
 }
 .gallery-view .addToBasketLnk i{
     display: none;
@@ -976,6 +979,10 @@ div.pInfoProductLongDescriptions{
 .product-variant{
     margin-top:2rem;
     padding-left: 0px !important;
+}
+
+#main #ShopContent .ecVariantTbl.one-row td:first-child{
+  display:none;
 }
 
 #main #ShopContent .ecVariantTbl td.vvh {

@@ -98,4 +98,8 @@ $(document).ready(function(){
         };
     }
 
+    if($('.ecVariantTbl tr').length < 3){
+      $('.ecVariantTbl').addClass('one-row');
+    }
+
 });
