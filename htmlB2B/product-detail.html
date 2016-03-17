@@ -93,6 +93,13 @@ font-size: 29px;
 
       <div class="holder top-pi">
       <div class="pInfoProductPrices left">
+          <eSeller:If isfalse="Product:ShowSalesprice">
+          <div class="ProductPrice">
+            <div class="ProductPriceLabel">
+              <eSeller:Select text="label_price" />
+            </div>
+          </div>
+          </eSeller:If>
         <eSeller:If istrue="Product:ShowSalesprice">
 
           <div class="ProductPrice">

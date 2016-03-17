@@ -1051,7 +1051,7 @@ td.ucImageControltrImg div img {
 .top-pi .stockAmountArea .stockAmountValue{
     color: #FFFFFF !important;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
 }
 .top-pi .stockAmountArea{
     background-color: #2e692d;
@@ -2070,6 +2070,15 @@ table#miyazaki tbody tr:not(:last-child) {
         top: 0px;
     }
 
+    .top-pi .pInfoProductPrices {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .top-pi .stockAmountArea {
+        width: 100%;
+    }
+
 
 } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
@@ -2099,6 +2108,10 @@ table#miyazaki tbody tr:not(:last-child) {
         right: 0;
         top: 0;
     }
+    .list-view .addToBasketLnk.variant-basket{
+        background: #000000 url("/media/252/img/matrixIcon.png") no-repeat 6px 3px;
+        background-size: 33px;
+    }
     .list-view .addToBasketLnk.variant-basket {
         width: 98px;
     }
@@ -2113,6 +2126,31 @@ table#miyazaki tbody tr:not(:last-child) {
     }
     .gallery-view .jsonProducts .products .productElement{
         width: 33%;
+    }
+
+    /*** product list add to basket ***/
+    .gallery-view .addToBasketLnk{
+        width: 81%;
+        min-width: 0 !important;
+        float: right !important;
+    }
+
+    .gallery-view .addToBasketLnk {
+        font-size: 12px;
+        padding: 11px 10px 10px;
+    }
+
+    .gallery-view input.qty-input {
+        position: relative;
+        right: 0;
+        top: 3px;
+        float: left;
+        width: 18% !important;
+        margin: 0 !important;
+    }
+
+    input.qty-input {
+        top: 0px;
     }
 } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 
