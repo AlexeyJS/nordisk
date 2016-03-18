@@ -107,7 +107,7 @@ weightBeforeZipCode=200000;
                             basketDiv.html(addToBasketTxt);
                         }
                         else {
-                            basketDiv.html("Select variants");
+                            basketDiv.html('Select variants<i class="fa fa-angle-right show-for-medium-only"></i>');
                             basketDiv.addClass('variant-basket');
                             basketDiv.click(function(){
                                 window.location.href = val.URLPathAndQuery;
