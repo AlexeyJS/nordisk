@@ -2235,7 +2235,7 @@ table#miyazaki tbody tr:not(:last-child) {
     }
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1088px) {
+@media only screen and (min-width: 1025px) and (max-width: 1188px) {
     .gallery-view .jsonProducts .products .productElement {
         width: 33%;
     }
