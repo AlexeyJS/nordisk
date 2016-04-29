@@ -435,3 +435,39 @@ font-size: 29px;
 
 
 </div>
+
+<script type="text/javascript">
+
+    var pId = '<eSeller:Select value-of="Product:ProductID" />';
+    var customerHashID = '<eSeller:Select value-of="Context:AuthTokenUrlEncoded" />';
+    var serialVariant = "<eSeller:Select Value-Of="Context:ProductlistCacheKey" />" + window.location.host;
+    var locIdVariant = <eSeller:Select Value-Of="context:location.InternalID" />;
+    var langIdVariant = <eSeller:Select Value-of="context:Language.LanguageID" />;
+    var cIdVariant = <eSeller:Select Value-of="context:Currency.CurrencyID" />;
+    var contIdVariant = <eSeller:Select Value-of="context:Country.CountryID" />;
+    var productHasVariants = '<eSeller:Select Value-Of="Product:HasVariants" />';
+
+    //<![CDATA[
+    //Call variants to get the correct price, but first check if current product has variants
+    if(productHasVariants === "True") {
+
+        var currentTxt = $('.ProductPriceLabel').text();
+        var newTxt = "";
+
+        variantsUrl = '/Services/ProductService.asmx/ProductVariants?v=1.0&cId=' + cIdVariant + '&langId=' + langIdVariant + '&countryId=' + contIdVariant + '&locId=' + locIdVariant + '&customerId=' + customerHashID + '&imgSizeId=0&pId=' + pId;
+
+		$.getJSON(variantsUrl, function(jsondata) {
+
+			$.each(jsondata.data.items, function(key, val) {
+
+                newTxt = currentTxt + " " + val.salesPrices[0].tagPriceFormatted
+
+			});
+
+            $('.ProductPriceLabel').text(newTxt);
+
+		});
+
+    }
+    //]]>
+</script>
