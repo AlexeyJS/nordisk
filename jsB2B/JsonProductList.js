@@ -89,9 +89,9 @@ weightBeforeZipCode=200000;
                 var addToBasketData = "";
                 var addToBasketTxt = "Add to Basket <i class='fa fa-angle-right'></i>";
                 if(val.showAddToBasket = "true") {
-                    if(val.isBuyable = "true") {
-                        basketDiv = $("<div></div>");
-                        basketDiv.addClass("addToBasketLnk");
+                    basketDiv = $("<div></div>");
+                    basketDiv.addClass("addToBasketLnk");
+                    if(val.isBuyable === true) {
                         if(val.hasVariants === false) {
                             basketDiv.click(function(){
 
@@ -106,13 +106,15 @@ weightBeforeZipCode=200000;
                             });
                             basketDiv.html(addToBasketTxt);
                         }
-                        else {
-                            basketDiv.html('Select variants<i class="fa fa-angle-right show-for-medium-only"></i>');
-                            basketDiv.addClass('variant-basket');
-                            basketDiv.click(function(){
-                                window.location.href = val.URLPathAndQuery;
-                            });
-                        }
+                    } else if(val.hasVariants === false) {
+                        basketDiv.addClass('not-on-stock');
+                        basketDiv.html('not on stock');
+                    } else if(val.hasVariants === true) {
+                        basketDiv.html('Select variants<i class="fa fa-angle-right show-for-medium-only"></i>');
+                        basketDiv.addClass('variant-basket');
+                        basketDiv.click(function(){
+                            window.location.href = val.URLPathAndQuery;
+                        });
                     }
                 }
 

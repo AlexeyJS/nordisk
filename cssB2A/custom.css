@@ -703,6 +703,14 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
 .addToBasketLnk:hover{
     opacity: 0.8;
 }
+.addToBasketLnk.not-on-stock {
+    background-color: #999 !important;
+    min-width: 143px;
+}
+.addToBasketLnk.not-on-stock:hover{
+    opacity: 1;
+    cursor: default;
+}
 .list-view .product-number{
     color: #333333;
     font-size: 11px;
