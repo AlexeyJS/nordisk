@@ -92,19 +92,24 @@ weightBeforeZipCode=200000;
                     basketDiv = $("<div></div>");
                     basketDiv.addClass("addToBasketLnk");
                     if(val.isBuyable === true) {
-                        if(val.hasVariants === false) {
-                            basketDiv.click(function(){
+                        if(val.inventoryCount <= 2) {
+                            basketDiv.addClass('not-on-stock');
+                            basketDiv.html('not on stock');
+                        } else {
+                            if(val.hasVariants === false) {
+                                basketDiv.click(function(){
 
-                                var qtyValue = $(this).prev(".qty-input").val();
+                                    var qtyValue = $(this).prev(".qty-input").val();
 
-                                if(val.grossWeightFormatted >= weightBeforeZipCode) {
-                                    ActivateBasketButtonPrompt(val.eSellerId, 0, '', qtyValue, 'GET', encodeURIComponent(window.location.pathname + window.location.search), false, true, val.expectedDeliveryDateFormatted);
-                                }
-                                else {
-                                    atbNoQty(val.eSellerId, 0, qtyValue, '', '', '', '', encodeURIComponent(window.location.pathname + window.location.search));
-                                }
-                            });
-                            basketDiv.html(addToBasketTxt);
+                                    if(val.grossWeightFormatted >= weightBeforeZipCode) {
+                                        ActivateBasketButtonPrompt(val.eSellerId, 0, '', qtyValue, 'GET', encodeURIComponent(window.location.pathname + window.location.search), false, true, val.expectedDeliveryDateFormatted);
+                                    }
+                                    else {
+                                        atbNoQty(val.eSellerId, 0, qtyValue, '', '', '', '', encodeURIComponent(window.location.pathname + window.location.search));
+                                    }
+                                });
+                                basketDiv.html(addToBasketTxt);
+                            }
                         }
                     } else if(val.hasVariants === false) {
                         basketDiv.addClass('not-on-stock');
@@ -182,9 +187,12 @@ weightBeforeZipCode=200000;
                 inputBox = $("<input />");
                 inputBox.attr("name", val.eSellerId);
                 inputBox.attr("type", "text");
-                if(val.inventoryCountFormatted <= 0){
+                inputBox.attr('qty', val.inventoryCount);
+                if(val.inventoryCount <= 2){
                     inputBox.attr("class", "qty-input red");
-                }else{
+                } else if(val.inventoryCount >= 3 && val.inventoryCount <= 9) {
+                    inputBox.attr("class", "qty-input yellow");
+                } else if(val.inventoryCount >= 10) {
                     inputBox.attr("class", "qty-input green");
                 }
                 inputBox.attr("value", "1");

@@ -77,10 +77,15 @@ $(document).ready(function(){
         $(this).prev("td.c3").append("<span>" + itemDescription + "</span>");
     });
 
-    var stockValue = $('.stockAmountValue').text();
+    var strimStockValue = $('.stockAmountValue').text();
+    strimStockValue = strimStockValue.replace('.', '');
+    strimStockValue = strimStockValue.replace(',', '');
+    var stockValue = parseFloat(strimStockValue);
 
-    if(stockValue <= 0){
+    if(stockValue <= 2){
         $(".stockAmountValue").parent(".stockAmountArea").addClass("not-in-stock");
+    } else if(stockValue >= 3 && stockValue <= 9) {
+        $(".stockAmountValue").parent(".stockAmountArea").addClass("low-in-stock");
     }
 
     if($('.search-results').length > 0){

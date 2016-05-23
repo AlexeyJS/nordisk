@@ -383,38 +383,41 @@
         <div class="pInfoBasket">
           <eSeller:If IsFalse="Product:HasVariants">
             <eSeller:If IsTrue="Product:ShowAddToBasket">
-              <div class="etBasket">
-                <eSeller:BasketButton ControlID="btnBasket">
-                  <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_basket" />
-                </eSeller:BasketButton>
-                <a class="basket-button"><img src="/media/252/img/thin-0443_shopping_cart_basket_store-white.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0443_shopping_cart_basket_store.png'" alt="Basket" class="btn-basket-small" /> Add to basket</a>
-              </div>
+            <div class="etBasket on-stock" style="display:none;">
+              <eSeller:BasketButton ControlID="btnBasket">
+                <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_basket" />
+              </eSeller:BasketButton>
+              <a class="basket-button"><img src="/media/252/img/thin-0443_shopping_cart_basket_store-white.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0443_shopping_cart_basket_store.png'" alt="Basket" class="btn-basket-small" /><eSeller:Select text="add_to_basket" /></a>
+            </div>
+            <div class="etBasket not-on-stock" style="display:none;">
                 <style type="text/css">
-                    .basket-button, .basket-button:hover {
-                        color: #fff;
-                    }
-                </style>
-              <!-- <a class="basket-button"><img src="/media/252/img/thin-0443_shopping_cart_basket_store-white.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0443_shopping_cart_basket_store.png'" alt="Basket" class="btn-basket-small" /> Add to basket</a> -->
-              <script type="text/javascript">
-                $(document).ready(function(){
-                  var bbClick = $(".ecBB img").attr('onclick');
-                  $('.basket-button').attr('onclick', bbClick);
-                });
-              </script>
-            </eSeller:If>
-            <eSeller:If IsFalse="Product:ShowAddToBasket">
-              <div class="etBasket">
-                <a class="basket-button"><img src="/media/252/img/thin-0443_shopping_cart_basket_store-white.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0443_shopping_cart_basket_store.png'" alt="Basket" class="btn-basket-small" /><eSeller:Select text="label_not_onStock" /></a>
-              </div>
-                <style type="text/css">
-                    .basket-button, .basket-button:hover {
+                    .not-on-stock .basket-button, .not-on-stock .basket-button:hover {
                         color: #fff;
                         cursor: default;
                     }
-                    .basket-button, .basket-button {
+                    .not-on-stock .basket-button, .not-on-stock .basket-button {
                         background-color: #999 !important;
                     }
                 </style>
+                <a class="basket-button"><img src="/media/252/img/thin-0443_shopping_cart_basket_store-white.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0443_shopping_cart_basket_store.png'" alt="Basket" class="btn-basket-small" /><eSeller:Select text="label_not_onStock" /></a>
+            </div>
+              <style type="text/css">
+                  .basket-button, .basket-button:hover {
+                      color: #fff;
+                  }
+              </style>
+
+            <script type="text/javascript">
+              $(document).ready(function(){
+                  if($('.stockAmountArea.not-in-stock').length > 0) {
+                      $('.etBasket.not-on-stock').show();
+                  } else {
+                      $('.etBasket.on-stock').show();
+                  }
+                var bbClick = $(".ecBB img").attr('onclick');
+                $('.on-stock .basket-button').attr('onclick', bbClick);
+              });
+            </script>
             </eSeller:If>
             <eSeller:If IsTrue="Product:IsDeprecated" >
               <div class="etBasket">
@@ -422,6 +425,20 @@
               </div>
 
               <button class="basket-button button disabled"><img src="/media/252/img/thin-0443_shopping_cart_basket_store-white.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0443_shopping_cart_basket_store.png'" alt="Basket" class="btn-basket-small" /> Add to basket</button>
+            </eSeller:If>
+            <eSeller:If IsFalse="Product:ShowAddToBasket">
+              <div class="etBasket not-on-stock-detail">
+                <a class="basket-button"><img src="/media/252/img/thin-0443_shopping_cart_basket_store-white.svg" onerror="this.onerror=null; this.src='/media/252/img/thin-0443_shopping_cart_basket_store.png'" alt="Basket" class="btn-basket-small" /><eSeller:Select text="label_not_onStock" /></a>
+              </div>
+                <style type="text/css">
+                    .not-on-stock-detail .basket-button, .not-on-stock-detail .basket-button:hover {
+                        color: #fff;
+                        cursor: default;
+                    }
+                    .not-on-stock-detail .basket-button, .not-on-stock-detail .basket-button {
+                        background-color: #999 !important;
+                    }
+                </style>
             </eSeller:If>
             <div style="clear:both;"></div>
           </eSeller:If>

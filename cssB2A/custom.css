@@ -736,6 +736,10 @@ input.qty-input.green {
     border: 1px solid #B9B9B9;
     background-color: #CDEFCD;
 }
+input.qty-input.yellow {
+    border: 1px solid #B9B9B9;
+    background-color: #f0d991;
+}
 input.qty-input.red {
     border: 1px solid #B9B9B9;
     background-color: #FFD9DA;
@@ -879,6 +883,10 @@ td.ucImageControltrImg div img {
 }
 .top-pi .stockAmountArea.not-in-stock{
     background-color: #FFD9DA;
+    border: 1px solid #B9B9B9;
+}
+.top-pi .stockAmountArea.low-in-stock{
+    background-color: #f0d991;
     border: 1px solid #B9B9B9;
 }
 .pInfoVariant .ecVariantLegend{
