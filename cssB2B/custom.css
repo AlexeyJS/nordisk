@@ -1081,6 +1081,7 @@ td.ucImageControltrImg div img {
 }
 #main #ShopContent .stockAmountValue {
     font-size: 18px;
+    display: none;
 }
 .top-pi .stockAmountArea.not-in-stock{
     background-color: #FFD9DA;
