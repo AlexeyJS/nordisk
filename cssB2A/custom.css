@@ -1947,6 +1947,9 @@ table#miyazaki tbody tr:not(:last-child) {
         right: 0;
         top: 0;
     }
+    .addToBasketLnk.not-on-stock {
+        min-width: 0px;
+    }
     .list-view .addToBasketLnk.variant-basket{
         background: #000000 url("/media/252/img/matrixIcon.png") no-repeat 47px 6px;
         background-size: 27px;
