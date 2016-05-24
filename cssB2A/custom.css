@@ -853,7 +853,7 @@ span.currentpage{
     padding: 12px;
 }
 td.ucImageControltrImg div img {
-    border: solid 1px #B9B9B9;
+    border: solid 0px #B9B9B9;
 }
 
 .top-pi .pInfoProductPrices .ProductPriceValue,
