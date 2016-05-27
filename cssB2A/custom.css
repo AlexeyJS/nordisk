@@ -744,6 +744,10 @@ input.qty-input.red {
     border: 1px solid #B9B9B9;
     background-color: #FFD9DA;
 }
+input.qty-input.grey{
+    border: 1px solid #B9B9B9;
+    background-color: #eeeeee;
+}
 
 /* Product listing gallery styles */
 
@@ -883,11 +887,15 @@ td.ucImageControltrImg div img {
     display: none;
 }
 .top-pi .stockAmountArea.not-in-stock{
-    background-color: #FFD9DA;
+    background-color: #eeeeee;
     border: 1px solid #B9B9B9;
 }
 .top-pi .stockAmountArea.low-in-stock{
     background-color: #f0d991;
+    border: 1px solid #B9B9B9;
+}
+.top-pi .stockAmountArea.low-in-stock-red{
+    background-color: #FFD9DA;
     border: 1px solid #B9B9B9;
 }
 .pInfoVariant .ecVariantLegend{

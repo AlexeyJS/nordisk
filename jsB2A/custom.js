@@ -84,8 +84,10 @@ $(document).ready(function(){
     strimStockValue = strimStockValue.replace(',', '');
     var stockValue = parseFloat(strimStockValue);
 
-    if(stockValue <= 2){
+    if(stockValue <= 0){
         $(".stockAmountValue").parent(".stockAmountArea").addClass("not-in-stock");
+    } else if(stockValue <= 2) {
+        $(".stockAmountValue").parent(".stockAmountArea").addClass("low-in-stock-red");
     } else if(stockValue >= 3 && stockValue <= 9) {
         $(".stockAmountValue").parent(".stockAmountArea").addClass("low-in-stock");
     }

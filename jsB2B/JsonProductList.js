@@ -92,9 +92,9 @@ weightBeforeZipCode=200000;
                     basketDiv = $("<div></div>");
                     basketDiv.addClass("addToBasketLnk");
                     if(val.isBuyable === true) {
-                        if(val.inventoryCount <= 2) {
+                        if(val.inventoryCount <= 0) {
                             basketDiv.addClass('not-on-stock');
-                            basketDiv.html('not on stock');
+                            basketDiv.html('not in stock');
                         } else {
                             if(val.hasVariants === false) {
                                 basketDiv.click(function(){
@@ -113,7 +113,7 @@ weightBeforeZipCode=200000;
                         }
                     } else if(val.hasVariants === false) {
                         basketDiv.addClass('not-on-stock');
-                        basketDiv.html('not on stock');
+                        basketDiv.html('not in stock');
                     } else if(val.hasVariants === true) {
                         basketDiv.html('Select variants<i class="fa fa-angle-right show-for-medium-only"></i>');
                         basketDiv.addClass('variant-basket');
@@ -188,7 +188,9 @@ weightBeforeZipCode=200000;
                 inputBox.attr("name", val.eSellerId);
                 inputBox.attr("type", "text");
                 inputBox.attr('qty', val.inventoryCount);
-                if(val.inventoryCount <= 2){
+                if(val.inventoryCount <= 0) {
+                    inputBox.attr("class", "qty-input grey");
+                } else if(val.inventoryCount <= 2){
                     inputBox.attr("class", "qty-input red");
                 } else if(val.inventoryCount >= 3 && val.inventoryCount <= 9) {
                     inputBox.attr("class", "qty-input yellow");
