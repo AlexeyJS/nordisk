@@ -454,6 +454,8 @@
 
 <script type="text/javascript">
 
+    $('.ecVariantTbl td input.notinstock').attr('readonly', true);
+
     var pId = '<eSeller:Select value-of="Product:ProductID" />';
     var customerHashID = '<eSeller:Select value-of="Context:AuthTokenUrlEncoded" />';
     var serialVariant = "<eSeller:Select Value-Of="Context:ProductlistCacheKey" />" + window.location.host;

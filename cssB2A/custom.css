@@ -223,6 +223,8 @@ h2 {
         display: none;
     }
 
+
+
 } /* Define mobile styles */
 
 /* Header Styling */
@@ -1031,8 +1033,8 @@ input.instock, input:focus.instock {
 }
 
 #main #ShopContent .ecVariantTbl input.notinstock {
-    background-color: #FFD9DA;
-    border: 1px solid #FFFFFF !important;
+    background-color: #eeeeee;
+    border: 1px solid #fff !important;
 }
 
 input.notinstock, input:focus.notinstock{
