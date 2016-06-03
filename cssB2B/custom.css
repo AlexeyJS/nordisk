@@ -848,7 +848,7 @@ a[aria-expanded="true"].fixed-side-basket .basket-back{
 .list-view .productImage {
     min-height: 40px;
     float: left;
-    border: solid 1px #B9B9B9;
+    border: solid 0px #B9B9B9;
 }
 
 .list-view .productImage img{
@@ -963,7 +963,7 @@ input.qty-input.grey{
 
 .gallery-view .productImage {
     min-height: 160px;
-    border: solid 1px #B9B9B9;
+    border: solid 0px #B9B9B9;
 }
 
 .gallery-view .productImage img{
