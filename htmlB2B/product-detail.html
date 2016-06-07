@@ -388,7 +388,12 @@ font-size: 29px;
                   }
               </script>
             </eSeller:If>
-
+            <div class="stock-indicator">
+                <div class="in-stock-indicator"><span class="color-box"></span><span><eSeller:Select text="label_in-stock-indicator" /></span></div>
+                <div class="low-in-stock-red-indicator"><span class="color-box"></span><span><eSeller:Select text="label_low-in-red-stock-indicator" /></span></div>
+                <div class="low-in-stock-indicator"><span class="color-box"></span><span><eSeller:Select text="label_low-in-stock-indicator" /></span></div>
+                <div class="not-in-stock-indicator"><span class="color-box"></span><span><eSeller:Select text="label_not-in-stock-indicator" /></span></div>
+            </div>
           </div>
           <!--Variant area end-->
       </section><!-- /Product: Variant -->
@@ -493,9 +498,22 @@ font-size: 29px;
 
 			$.each(jsondata.data.items, function(key, val) {
 
-                newTxt = currentTxt + " " + val.salesPrices[0].tagPriceFormatted
+                newTxt = currentTxt + " " + val.salesPrices[0].tagPriceFormatted;
+                $( ".ecVariantTbl input[name*='"+val.variantId+"']" ).attr("stock", val.inventoryCount);
 
 			});
+
+            //Adds more functionality to the amount boxes on variants
+            $( ".ecVariantTbl input" ).each(function( index ) {
+                currentStockAmount = parseFloat($(this).attr('stock'));
+                if(currentStockAmount >= 10) { //in stock
+                    //Already gets this from cloud
+                } else if(currentStockAmount >= 3 && currentStockAmount <= 9) { // low in stock
+                    $(this).addClass('low-in-stock');
+                } else if(currentStockAmount <= 2) { // really low in stock
+                    $(this).addClass('low-in-stock-red');
+                }
+            });
 
             $('.ProductPriceLabel').text(newTxt);
 

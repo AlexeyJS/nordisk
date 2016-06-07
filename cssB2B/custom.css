@@ -1148,6 +1148,11 @@ h1.product-name{
 
 .product-information div{
     display:inline-block;
+    vertical-align: middle;
+}
+
+#main #ShopContent .pInfoVariant {
+    width: 100% !important;
 }
 
 div.ProductID,
@@ -1219,6 +1224,51 @@ div.pInfoProductLongDescriptions{
 #main #ShopContent .ecVariantTbl input.instock {
     background-color: #CDEFCD;
     border: 1px solid #FFFFFF !important;
+}
+#main #ShopContent .ecVariantTbl input.instock.low-in-stock {
+    background-color: #f0d991;
+    border: 1px solid #FFFFFF !important;
+}
+#main #ShopContent .ecVariantTbl input.instock.low-in-stock-red {
+    background-color: #FFD9DA;
+    border: 1px solid #FFFFFF !important;
+}
+
+.stock-indicator {
+    display: inline-block;
+    max-width: 300px;
+    vertical-align: middle;
+    margin-top: 40px;
+}
+
+.stock-indicator > div {
+    display: inline-block;
+    min-width: 50%;
+    margin-bottom: 5px;
+}
+
+.stock-indicator > div span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.stock-indicator > div span.color-box {
+    min-width: 26px;
+    min-height: 26px;
+    background-color: #CDEFCD;
+}
+
+.stock-indicator > div.low-in-stock-indicator span.color-box {
+    background-color: #f0d991;
+}
+
+.stock-indicator > div.low-in-stock-red-indicator span.color-box {
+    background-color: #FFD9DA;
+}
+
+.stock-indicator > div.not-in-stock-indicator span.color-box {
+    background-color: #eeeeee;
 }
 
 input.instock, input:focus.instock {
