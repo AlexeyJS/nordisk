@@ -15,6 +15,12 @@ $(function() {
 
 $(document).ready(function(){
 
+    //console.log($('.basket-details .ec32Table td.c5 input').parent().parent().children('td.c3').children('a').removeAttr('href'));
+    $( '.basketStep01 .basket-details .ec32Table td.c5 input' ).each(function( index ) {
+        console.log($(this).parent().parent().children('td.c3').children('span').children('i').children('a').attr('href'));
+        $(this).parent().parent().addClass('variant-row');
+    });
+
     // SmartSearch
     $('#drop2 .textbox').appendTo('.inputfield');
     $('#drop2 .submit').appendTo('.submitfield');

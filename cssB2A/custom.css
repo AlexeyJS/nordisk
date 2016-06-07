@@ -1237,9 +1237,14 @@ input.notinstock, input:focus.notinstock{
     text-align:right;
 }
 
-.basket-details tr{
+.basket-details tr {
     border-top:1px solid #e6e6e6;
     border-bottom:1px solid #e6e6e6;
+}
+
+.basket-details tr.variant-row {
+    pointer-events: none;
+    cursor: default;
 }
 
 .basket-details tr:nth-of-type(even){
