@@ -387,6 +387,17 @@
         <!--Basket area start-->
         <div class="pInfoBasket">
           <eSeller:If IsFalse="Product:HasVariants">
+          <style type="text/css">
+              .stock-indicator > div {
+                  text-align: left;
+              }
+              .stock-indicator {
+                  margin-top: 40px;
+              }
+              .etBasket {
+                  margin-top: 58px;
+              }
+          </style>
             <eSeller:If IsTrue="Product:ShowAddToBasket">
             <div class="etBasket on-stock" style="display:none;">
               <eSeller:BasketButton ControlID="btnBasket">
@@ -440,12 +451,21 @@
                         color: #fff;
                         cursor: default;
                     }
+                    .etBasket {
+                        margin-top: 39px;
+                    }
                     .not-on-stock-detail .basket-button, .not-on-stock-detail .basket-button {
                         background-color: #999 !important;
                     }
                 </style>
             </eSeller:If>
             <div style="clear:both;"></div>
+            <div class="stock-indicator">
+                <div class="in-stock-indicator"><span class="color-box"></span><span><eSeller:Select text="label_in-stock-indicator" /></span></div>
+                <div class="low-in-stock-red-indicator"><span class="color-box"></span><span><eSeller:Select text="label_low-in-red-stock-indicator" /></span></div>
+                <div class="low-in-stock-indicator"><span class="color-box"></span><span><eSeller:Select text="label_low-in-stock-indicator" /></span></div>
+                <div class="not-in-stock-indicator"><span class="color-box"></span><span><eSeller:Select text="label_not-in-stock-indicator" /></span></div>
+            </div>
           </eSeller:If>
         </div>
         <!--Basket area end-->
