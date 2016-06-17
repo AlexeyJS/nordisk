@@ -15,6 +15,14 @@ $(function() {
 
 $(document).ready(function(){
 
+    $('a.moreButton').on('click',function(){
+		//Dont remove, it makes the links work on tablet
+    });
+
+    $('a.searchButton').on('click',function(){
+		//Dont remove, it makes the links work on tablet
+    });
+
     //console.log($('.basket-details .ec32Table td.c5 input').parent().parent().children('td.c3').children('a').removeAttr('href'));
     $( '.basketStep01 .basket-details .ec32Table td.c5 input' ).each(function( index ) {
         console.log($(this).parent().parent().children('td.c3').children('span').children('i').children('a').attr('href'));

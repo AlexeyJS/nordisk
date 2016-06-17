@@ -266,6 +266,9 @@ div.divVariantSelector{
     background-position:90%;
     background-size:20%;
     text-align:left;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 25px;
   }
   .btn-change-customer, .btn-end-customer{
     font-size:.5rem;
